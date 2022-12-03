@@ -59,6 +59,7 @@ board_build.partitions = default_16MB.csv
 ## Support
 
 If you have challenges soldering the device or installing the software, feel free to reach out to:
+
 -Pieter (EHV)
 
 -Luigi (AMS)
