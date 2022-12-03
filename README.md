@@ -1,8 +1,10 @@
-# Operame
+# Operame as origin
 
 SecurAir is based on the source code of [ControlCO2-meter](https://controlco2.space), which is based on the original project [operame](https://operame.nl/Operame) launched by RevSpace.
 
 SecuraAir was handed out as a free Christmas Gift (not for profit) December 2022 by [Secura](https://www.secura.com)
+
+Big thanks to Norbert from [Allnet China](https://shop.allnetchina.cn/) for sourcing and shipping all the required components.
 
 ## Language
 
