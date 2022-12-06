@@ -218,7 +218,7 @@ void ppm_demo() {
     display_logo();
     delay(1000);
     int buttoncounter = 0;
-    for (int p = 400; p < 1200; p++) {
+    for (int p = 400; p < 1300; p++) {
         display_ppm(p);
         if (button(pin_demobutton)) {
             display_logo();
@@ -471,9 +471,9 @@ void setup() {
     ota_enabled   = WiFiSettings.checkbox("operame_ota", false, T.config_ota) && wifi_enabled;
 
     WiFiSettings.heading("CO2-niveaus");
-    co2_warning   = WiFiSettings.integer("operame_co2_warning", 400, 5000, 700, T.config_co2_warning);
-    co2_critical  = WiFiSettings.integer("operame_co2_critical",400, 5000, 800, T.config_co2_critical);
-    co2_blink     = WiFiSettings.integer("operame_co2_blink",   800, 5000, 800, T.config_co2_blink);
+    co2_warning   = WiFiSettings.integer("operame_co2_warning", 400, 5000, 750, T.config_co2_warning);
+    co2_critical  = WiFiSettings.integer("operame_co2_critical",400, 5000, 1000, T.config_co2_critical);
+    co2_blink     = WiFiSettings.integer("operame_co2_blink",   1000, 5000, 1250, T.config_co2_blink);
 
     WiFiSettings.heading("MQTT");
     mqtt_enabled  = WiFiSettings.checkbox("operame_mqtt", false, T.config_mqtt) && wifi_enabled;
