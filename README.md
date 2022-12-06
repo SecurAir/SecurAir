@@ -29,37 +29,43 @@ This repository uses [PlatformIO](https://platformio.org/) for the installation 
 
 1. Install PlatformIO ([Installation instructions](https://docs.platformio.org/en/latest/core/installation/shell-commands.html#piocore-install-shell-commands)).
 2. Clone this repository.
-3. In you command line or terminal, go to the cloned repository and run `pio run`.
+3. Connect your SecurAir module to your computer using its USB C port.
+4. In you command line or terminal, go to the cloned repository and run `pio run`.
+  
+## Windows 10 users
+These instructions assume that you're using a Windows 10 System
+
+- Install Visual Studio Code 
+- Install the PlatformIO extension in VSCode.
+- Install Python 3.11 and make sure the option to add to the PATH is selected!
+- Install git
+- Use git to this repository with the command `git clone https://github.com/SecurAir/SecurAir`
+- Connect the SecurAir board via USB and check if a COM port (e.g. COM 9) apears in the device manager. Otherwise, please install the drivers mentioned below under Tips.
+- In the SecurAir folder, execute `pio run`.
 
 ## Tips
 
 If the SecurAir board isn't detected by Windows, you could install the cp210x USB TO UART drivers by silicon labs.
 https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
-  
-## Windows 10 users  
-- Windows 10 System
-- Install visual studio code installeren
-- Install PlatformIO extension in VSCode.
-- Install python 3.11 and make sure the option to add to the PATH is selected!
-- Install GIT to be able to clone the repository
-- Connect the SecurAir board via USB and check if a COM port (e.g. COM 9) apears in the device manager. Otherwise, please install the drivers mentioned above.
-- In the SecurAir folder, execute `pio run`.
 
 ## 4MB or 16MB
 
+``` ini
 board = esp32thing
 board_build.partitions = default.csv
+```
 
-If you have a 16MB TTGO T-Display board, you can change the env settings in the platformio.ini file.
+If you have a 16MB TTGO T-Display board, you can change the env settings in the platformio.ini file:
+
+``` ini
 board = esp32thing_plus
 board_build.partitions = default_16MB.csv
+```
 
 ## Support
 
 If you have challenges soldering the device or installing the software, feel free to reach out to:
 
--Pieter (EHV)
-
--Luigi (AMS)
-
--Sjoerd (AMS)
+- Pieter (EHV)
+- Luigi (AMS)
+- Sjoerd (AMS)
