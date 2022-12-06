@@ -23,9 +23,11 @@ Please note that for convenience, we chose a "solder through" PCB. This means th
 
 ### Installation
 
+Warning: be careful with installing unknown software on your Secura laptop. Preferably use your personal computer or a virtual machine to install SecurAir on your module.
+
 This repository uses [PlatformIO](https://platformio.org/) for the installation on the TTGO Display.
 
-1. Install PlatformIO.
+1. Install PlatformIO ([Installation instructions](https://docs.platformio.org/en/latest/core/installation/shell-commands.html#piocore-install-shell-commands)).
 2. Clone this repository.
 3. In you command line or terminal, go to the cloned repository and run `pio run`.
 
@@ -35,19 +37,13 @@ If the SecurAir board isn't detected by Windows, you could install the cp210x US
 https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers
   
 ## Windows 10 users  
--Windows 10 System
-
--Install visual studio code installeren
-
--Install PlatformIO extension in VSCode.
-
--Install python 3.11 and make sure the option to add to the PATH is selected!
-
--Install GIT to be able to clone the repository
-
--Connect the SecurAir board via USB and check if a COM port (e.g. COM 9) apears in the device manager. Otherwise, please install the drivers mentioned above.
-
--In the SecurAir folder, execute `pio run`.
+- Windows 10 System
+- Install visual studio code installeren
+- Install PlatformIO extension in VSCode.
+- Install python 3.11 and make sure the option to add to the PATH is selected!
+- Install GIT to be able to clone the repository
+- Connect the SecurAir board via USB and check if a COM port (e.g. COM 9) apears in the device manager. Otherwise, please install the drivers mentioned above.
+- In the SecurAir folder, execute `pio run`.
 
 ## 4MB or 16MB
 
