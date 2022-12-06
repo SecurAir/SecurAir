@@ -62,6 +62,17 @@ board = esp32thing_plus
 board_build.partitions = default_16MB.csv
 ```
 
+## WiFi and MQTT
+
+Warning: by default the device is extremely unsecured, make sure its at the very least firewalled before connecting it to your WiFi.
+
+1. Press the button just below the USB-C port on the display of the SecurAir.
+2. Connect to the WiFi network that starts with `SecurAir-`.
+3. After it has scanned for WiFi connections, configure your WiFi and MQTT broker. Do not forget to check the box that says `WiFi enabled`.
+4. Click save and restart your SecurAir.
+
+The device will send the CO2 status to your MQTT broker under a topic named `SecurAir-`.
+
 ## Support
 
 If you have challenges soldering the device or installing the software, feel free to reach out to:
