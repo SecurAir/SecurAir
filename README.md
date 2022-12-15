@@ -12,18 +12,12 @@ The default language is set to English; users can pick a different language usin
 WiFi configuration portal. To change the default setting to Dutch, change
 `#define LANGUAGE "en"` to `#define LANGUAGE "nl"`.
 
-## Usage
-
-Once the device is soldered and the software is uploaded, the device should work stand alone.
-Please allow a couple of days to callibrate the sensor and make sure it is in a room with fresh air (so longer times without people). The sensor will automatically calibrate to the lowest value being 400.
-
-The sensor is very sensitive to power fluctuations.  So please use the same powersupply (e.g. USB charger). If you change from one charger to the other (or to a USB port on your computer or Power Bank), it might need some callibration days again.
-
-Please note that for convenience, we chose a "solder through" PCB. This means that the pins are exposed on the back side of the PCB. Don't place the PCB on a conducting surface (e.g. metal surface) while in use!
+## Assembly instructions
+Please refer to SecurAir-Soldering.pdf for instructions and pictures of the compontents and how to assemble them.
 
 ### Installation
 
-Warning: be careful with installing unknown software on your Secura laptop. Preferably use your personal computer or a virtual machine to install SecurAir on your module.
+Warning: be careful with installing unknown software on your Secura laptop. Preferably use your personal computer or a virtual machine to install SecurAir on your module in order to not break any business applications and tooling.
 
 This repository uses [PlatformIO](https://platformio.org/) for the installation on the TTGO Display.
 
@@ -35,6 +29,7 @@ This repository uses [PlatformIO](https://platformio.org/) for the installation 
 ## Windows 10 users
 These instructions assume that you're using a Windows 10 System
 
+- Disable some aggressive virus scanners. Norton didn't like pio to compile the software.
 - Install Visual Studio Code 
 - Install the PlatformIO extension in VSCode.
 - Install Python 3.11 and make sure the option to add to the PATH is selected!
@@ -42,6 +37,15 @@ These instructions assume that you're using a Windows 10 System
 - Use git to this repository with the command `git clone https://github.com/SecurAir/SecurAir`
 - Connect the SecurAir board via USB and check if a COM port (e.g. COM 9) apears in the device manager. Otherwise, please install the drivers mentioned below under Tips.
 - In the SecurAir folder, execute `pio run`.
+
+## Usage
+
+Once the device is soldered and the software is uploaded, the device should work stand alone.
+Please allow a couple of days to callibrate the sensor and make sure it is in a room with fresh air (so longer times without people). The sensor will automatically calibrate to the lowest value being 400.
+
+The sensor is very sensitive to power fluctuations.  So please use the same powersupply (e.g. USB charger). If you change from one charger to the other (or to a USB port on your computer or Power Bank), it might need some callibration days again.
+
+Please note that for convenience, we chose a "solder through" PCB. This means that the pins are exposed on the back side of the PCB. Don't place the PCB on a conducting surface (e.g. metal surface) while in use!
 
 ## Tips
 
@@ -62,7 +66,7 @@ board = esp32thing_plus
 board_build.partitions = default_16MB.csv
 ```
 
-## WiFi and MQTT
+## WiFi and MQTT for integration in Home Automation
 
 Warning: by default the device is extremely unsecured, make sure its at the very least firewalled before connecting it to your WiFi.
 
